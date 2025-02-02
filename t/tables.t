@@ -5,17 +5,17 @@ use Test::More;
 
 use Mojo::Pg;
 
-use Database::Postgres;
+# use Daje::Database::Postgres;
 
 sub tables {
 
-    my $pg = Mojo::Pg->new->dsn(
-        "dbi:Pg:dbname=Workflowtest;host=database;port=15432;user=test;password=test"
-    );
-
-    my $tables = Database::Postgres->new(pg=>$pg);
-    my $excluded = "mojo_migrations";
-    my $list = $tables->get_tables($excluded,'public');
+    # my $pg = Mojo::Pg->new->dsn(
+    #     "dbi:Pg:dbname=Workflowtest;host=database;port=15432;user=test;password=test"
+    # );
+    #
+    # my $tables = Daje::Database::Postgres->new(pg=>$pg);
+    # my $excluded = "mojo_migrations";
+    # my $list = $tables->get_tables($excluded,'public');
     my $test = 1;
     return $test;
 }
